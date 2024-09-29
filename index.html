@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Backup Simulator Beta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Power Backup Simulator Beta</h1>
+        <div id="money">Money: $<span id="money-value">50000</span></div>
+        <div id="battery">
+            <div id="battery-level"></div>
+            <div id="battery-timer">0:00</div>
+        </div>
+        <button onclick="toggleMenu()">Menu</button>
+    </div>
+
+    <div id="side-menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+        <h2>Menu</h2>
+        <div>
+            <div id="buy-station-cost">Buy New Station: $<span id="new-station-cost">30000</span></div>
+            <button onclick="buyNewStation()">Buy New Station</button>
+        </div>
+        <div>
+            <div id="upgrade-station-cost">Upgrade Station: $<span id="upgrade-cost">10000</span></div>
+            <button onclick="upgradeStation()">Upgrade Station</button>
+        </div>
+        <div>
+            <div id="change-station-cost">Change Station: Free (Must own another station)</div>
+            <button onclick="changeStation()">Change Station</button>
+        </div>
+        <div>
+            <button onclick="chargeStation()">Charge Station</button>
+            <button onclick="sellPower()">Sell Power</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
